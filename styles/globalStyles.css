@@ -1,0 +1,19 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li, a {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+p {
+    display: block;
+    
+}
+.link-container a {
+    display: block;
+}
