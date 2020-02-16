@@ -1,41 +1,15 @@
 import "../styles/globalStyles.css";
-import App from "next/app";
+import App, { AppProps } from "next/app";
 import withApollo from "../lib/withApollo";
 import { ApolloProvider } from "@apollo/react-hooks";
-
-// const App: React.FC<any> = ({
-//   children
-// }) => (
-//   <div>
-//     <h1>hihihihih</h1>
-//     {
-//       children
-//     }
-//   </div>
-// );
-
-
-// const ME = gql`
-//   query AllPosts {
-//     allPosts {
-//       title
-//       id
-//       createdAt
-//     }
-//   }
-// `;
-// import App from 'next/app'
+import { ApolloClient } from "apollo-boost";
 
 const MyApp = ({ Component, pageProps, apollo }) => {
-  // console.log("DATA: ", pageProps);
-  // console.log("pageProps: ", pageProps);
-  // const data = this.pageProps;
-    // console.log("DATA: ", apollo);
+  
   return (
     <ApolloProvider client={apollo}>
       <Component { ...pageProps }/>
     </ApolloProvider>
-    // <Component { ...pageProps } />
   )
 }
 MyApp.getInitialProps = async ({ Component, router, ctx }) => {

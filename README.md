@@ -4,6 +4,8 @@
 ## Todo
 - [x] nextjs-client init
 - [x] NextJS + GraphQL/Apollo + SSR, Link, Head
+- [x] Dynamic Link + Dynamic Routes
+
 
 ## Install
 > yarn create next-app . with-apollo-app with-typescript-app

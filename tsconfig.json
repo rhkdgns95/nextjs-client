@@ -24,6 +24,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "lib/withApollo.js", "lib/withApollo.js", "pages/_app.js"
+    "**/*.tsx", "lib/withApollo.js", "lib/withApollo.js", "pages/_app.ts"
   ]
 }

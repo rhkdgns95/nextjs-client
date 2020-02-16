@@ -4,8 +4,7 @@ import { gql } from 'apollo-boost';
 import Head from "next/head";
 import Presenter from "./Presenter";
 
-
-const ME = gql`
+const GET_POSTS = gql`
   query AllPosts {
     allPosts {
       title
@@ -30,11 +29,10 @@ const Index = props => {
 Index.getInitialProps = async (ctx) => {
     // console.log("Index: ", ctx);
     const { apolloClient } = ctx;
-    const { data: { allPosts = [] } = {}} = await apolloClient.query({ query: ME });
+    const { data: { allPosts = [] } = {}} = await apolloClient.query({ query: GET_POSTS });
 
     // console.log("allPostsData: ", allPosts);
     return {    
-        title: "LOGOGOG",
         allPosts
     };
 };
